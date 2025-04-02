@@ -1,0 +1,244 @@
+---
+title: "Ivanov_Varsamov_Nikolay_pec1"
+author: "Nikolay Ivanov"
+date: "2025-04-02"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Índice
+
+## Introducción
+
+## Selección del dataset
+
+## Procesamiento de los datos
+
+### Filtrado y preparación del objeto `SummarizedExperiment`
+
+## Análisis exploratorio
+
+### Análisis de componentes principales (PCA)
+
+### Heatmap de features más variables
+
+### Clustering jerárquico de muestras
+
+## Interpretación de resultados
+
+## Referencias
+
+
+
+## Introducción
+Se ha llevado a cabo un análisis exploratorio de datos metabolómicos obtenidos de un proyecto de metabolómica (mediante espectrometría de masas en tandem con cromatografía líquida LC-MS) durante el proceso de malteado de cebada. A partir de los datos crudos y los metadatos proporcionados, se construyó un objeto SummarizedExperiment utilizando herramientas del ecosistema Bioconductor, permitiendo integrar las intensidades metabolómicas con la información experimental. El análisis incluyó una transformación logarítmica, normalización y selección de las features más variables. Posteriormente, se aplicaron métodos de reducción de dimensionalidad (PCA), visualización mediante mapas de calor y clustering jerárquico.
+
+## Repositorio GIT de depósito:
+https://github.com/nmi291434/Ivanov_Varsamov_Nikolay_PEC1
+
+## Selección del dataset
+Se ha seleccionado el dataset ST003289, de la página metabolomicsworkbench
+
+
+## Procesamiento de los datos
+
+Observamos la hoja de metadatos disponible
+```{r setup, include}
+library(SummarizedExperiment)
+library(tibble)
+library(dplyr)
+library(readxl)
+
+# Ver hojas disponibles
+excel_sheets("Study design.xlsx")
+
+# Leer la hoja única del Excel
+metadata <- read_excel("Study design.xlsx")
+
+# Filtrar solo las muestras de plataforma LC-MS
+metadata_lcms <- metadata %>%
+  filter(Platform == "LC-MS")
+
+# Ver la matriz resultante
+print(metadata_lcms)
+
+# Si quieres convertirlo a una matriz R base (opcional)
+metadata_matrix <- as.matrix(metadata_lcms)
+```
+
+Confirmamos la unicalidad de los local_sample_id empleados en el proyecto
+```{r }
+anyDuplicated(metadata_lcms$local_sample_id)
+```
+Abrimos archivo de resultados de lcms
+```{r }
+lcms_data <- read.delim("ST003289_AN005386_Results (1).txt", check.names = FALSE)
+str(lcms_data)
+```
+
+Verificamos coincidencias
+```{r }
+# Extraer nombres de muestra del archivo LC-MS (sin contar la primera columna que es el ID de feature)
+sample_names_lcms <- colnames(lcms_data)[-1]
+
+# Verificar cuáles están presentes en los metadatos
+matching_samples <- sample_names_lcms %in% metadata_lcms$local_sample_id
+
+# Mostrar resumen
+table(matching_samples)
+```
+
+### Filtrado y preparación del objeto `SummarizedExperiment`
+
+Procedemos a la generación del objeto summarized experiment para los resultados lcms
+```{r }
+# Paso 1: Identificar muestras comunes
+common_samples <- intersect(metadata_lcms$local_sample_id, colnames(lcms_data)[-1])
+
+# Paso 2: Filtrar datos de intensidades
+assay_matrix <- lcms_data[, c("Primary adduct_Rt", common_samples)]
+rownames(assay_matrix) <- assay_matrix$`Primary adduct_Rt`
+assay_matrix <- assay_matrix[, -1]  # eliminar columna de nombres de features
+
+# Convertir a matriz numérica
+assay_matrix <- as.matrix(assay_matrix)
+
+# Paso 3: Filtrar metadatos
+col_data <- metadata_lcms %>%
+  filter(local_sample_id %in% common_samples) %>%
+  arrange(match(local_sample_id, common_samples))  # para mantener el orden
+
+# Paso 4: Crear objeto SummarizedExperiment
+se <- SummarizedExperiment(
+  assays = list(counts = assay_matrix),
+  colData = col_data
+)
+
+# Paso 5: Metadatos experimentales
+metadata(se)$experiment_info <- list(
+  treatment_id = "TR003418",
+  treatment_summary = "9 samples were collected (three per micro-malting replicate) at 6 different stages: unmalted mature grain (DRY), post-steep (DOG0), on alternating days of germination (DOG1, DOG3, DOG5), and at the end of kilning (KILNED).",
+  chromatography = list(
+    chromatography_id = "CH004083",
+    instrument_name = "Waters Acquity",
+    column = "Waters Acquity UPLC CSH Phenyl Hexyl (1.7 µM, 1.0 × 100 mm)",
+    temperature = "65°C",
+    flow_rate = "200 µL/min",
+    solvents = list(
+      A = "100% water; 0.1% ammonium formate",
+      B = "100% acetonitrile; 0.1% formic acid"
+    ),
+    type = "Reversed phase"
+  ),
+  ms_analysis = list(
+    analysis_id = "AN005386",
+    ms_type = "ESI",
+    ms_instrument = "Waters Xevo-G2-XS",
+    ion_mode = "POSITIVE",
+    units = "Peak Area"
+  )
+)
+
+
+# Ver resumen
+se
+```
+Guardamos el objeto summarized experiment en formato rda
+```{r }
+save(se, file = "lcms_summarized.Rda")
+```
+
+
+## Análisis exploratorio
+
+### Análisis de componentes principales (PCA)
+
+Realizamos un PCA sobre los datos normalizados
+```{r }
+# Extraer matriz de intensidades
+expr <- assay(se)
+
+# Log-transformación (añadimos un pseudoconteo para evitar log(0))
+log_expr <- log2(expr + 1)
+
+# Normalizar (centrar y escalar)
+log_expr_scaled <- t(scale(t(log_expr)))
+
+# PCA
+pca <- prcomp(t(log_expr_scaled))
+
+# Gráfico
+library(ggplot2)
+pca_df <- as.data.frame(pca$x)
+pca_df$Treatment <- colData(se)$Treatment
+
+ggplot(pca_df, aes(PC1, PC2, color = Treatment)) +
+  geom_point(size = 3) +
+  theme_minimal() +
+  labs(title = "PCA de muestras LC-MS",
+       x = paste0("PC1 (", round(summary(pca)$importance[2,1] * 100, 1), "%)"),
+       y = paste0("PC2 (", round(summary(pca)$importance[2,2] * 100, 1), "%)"))
+```
+El PCA obtenido muestra una separación clara entre tratamientos, especialmente KILNED y DRY a lo largo de PC1, que explica el 30,8% de la variabilidad. Las muestras DOG0, DOG1, DOG3 y DOG5 se agrupan más cerca entre sí, con cierta diferenciación en PC2 (12,8%). La distribución sugiere un efecto notable del tratamiento sobre el perfil metabolómico y una buena consistencia entre réplicas.
+
+### Heatmap de features más variables
+
+Así pues, seguimos con un heatmap para observar la abundancia de metabolitos según tratamiento y muestra:
+```{r }
+# Calcular varianza por fila
+feature_vars <- apply(log_expr, 1, var)
+
+# Seleccionar top 50 features más variables
+top_features <- names(sort(feature_vars, decreasing = TRUE))[1:50]
+heatmap_data <- log_expr[top_features, ]
+
+# Etiquetas de columnas
+sample_annots <- as.data.frame(colData(se)[, c("Treatment")])
+
+# Asegurarse de que la anotación sea válida
+sample_annots <- as.data.frame(colData(se)[, "Treatment", drop = FALSE])
+
+# Convertir a factor si no lo es
+sample_annots$Treatment <- as.factor(sample_annots$Treatment)
+
+# Verifica estructura
+str(sample_annots)
+
+# Heatmap
+library(pheatmap)
+pheatmap(heatmap_data,
+         scale = "row",
+         annotation_col = sample_annots,
+         show_rownames = FALSE,
+         clustering_distance_rows = "euclidean",
+         clustering_method = "complete",
+         main = "Heatmap de las 50 features más variables")
+```
+El heatmap revela una agrupación clara de las muestras según el tratamiento, con patrones de expresión diferenciados en las 50 features más variables. Cada fila representa una feature metabolómica identificada por su combinación de m/z y tiempo de retención, ordenada en el eje Y según la similitud de su patrón de abundancia entre muestras. Las muestras de un mismo grupo tienden a agruparse juntas, lo que indica coherencia interna, mientras que los tratamientos KILNED y DRY presentan perfiles notablemente distintos respecto al resto. Se observa una región central de features con alta intensidad relativa en DOG3 y DOG5, que contrasta con la baja intensidad en DOG0 y DRY, lo que sugiere que estas features podrían estar relacionadas con las condiciones experimentales aplicadas.
+
+### Clustering jerárquico de muestras
+
+Seguidamente, creamos un dendrograma por clustering para ver agrupamientos por perfil metabolómico:
+
+```{r }
+# Distancias entre muestras (usamos datos log-transformados y escalados)
+dist_samples <- dist(t(log_expr_scaled), method = "euclidean")
+
+# Clustering
+hc <- hclust(dist_samples, method = "complete")
+
+# Dendrograma
+plot(hc, labels = colData(se)$Treatment,
+     main = "Clustering jerárquico de las muestras",
+     xlab = "", sub = "")
+```
+
+El clustering ha agrupado las muestras según la similitud de sus perfiles metabolómicos. Se observa una separación clara entre grupos de tratamiento, con KILNED y DRY formando ramas independientes. Los tratamientos DOG0, DOG1, DOG3 y DOG5 se agrupan en ramas más próximas, aunque con subdivisiones que reflejan diferencias internas. La organización general del dendrograma indica que el tratamiento tiene un efecto importante en la composición metabólica de las muestras, y que las réplicas dentro de cada grupo presentan un alto grado de similitud.
+
+## Interpretación de resultados
+
+El análisis exploratorio del perfil metabolómico mediante LC-MS permite identificar patrones diferenciados entre tratamientos aplicados durante el proceso de malteado. La reducción de dimensionalidad mediante PCA, el mapa de calor de las variables más variables y el clustering jerárquico de muestras muestran una agrupación coherente por etapa, con especial diferenciación en las fases de kilning y germinación avanzada. Estos resultados sugieren que los tratamientos aplicados inducen cambios consistentes en el metabolismo de la cebada, y que dichos cambios pueden ser aprovechados como base para el desarrollo de indicadores de calidad o el seguimiento del proceso.
+
+## Referencias
+Rani, H., & Whitcomb, S. J. (2025). Integrative LC-MS and GC-MS metabolic profiling unveils dynamic changes during barley malting. Food Chemistry, 463https://10.1016/j.foodchem.2024.141480

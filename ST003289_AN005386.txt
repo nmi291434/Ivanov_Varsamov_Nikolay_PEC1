@@ -1,0 +1,275 @@
+#METABOLOMICS WORKBENCH hrani_26_20240617_121348 DATATRACK_ID:4935 STUDY_ID:ST003289 ANALYSIS_ID:AN005386 PROJECT_ID:PR002041
+VERSION                          	1
+CREATED_ON                       	10-16-2024
+#PROJECT
+PR:PROJECT_TITLE                 	Malting Time-course metabolomics study
+PR:PROJECT_TYPE                  	Untargeted LC-MS and GC-MS analysis
+PR:PROJECT_SUMMARY               	Malting, a crucial process for beer production, involves complex biochemical
+PR:PROJECT_SUMMARY               	transformations affecting sensory attributes and product quality. Limited
+PR:PROJECT_SUMMARY               	knowledge of metabolic alterations during malting hinders the ability to enhance
+PR:PROJECT_SUMMARY               	malt quality. This study uses untargeted GC-MS and LC-MS metabolite profiling to
+PR:PROJECT_SUMMARY               	characterize metabolic dynamics through the malting process. After data
+PR:PROJECT_SUMMARY               	processing, a total of 4980 known metabolites were identified across six stages:
+PR:PROJECT_SUMMARY               	dry seed, post-steeping, germination (DOG1, DOG3, DOG5), and kilned, about 82%
+PR:PROJECT_SUMMARY               	of these showed significant changes during malting. Statistical analysis
+PR:PROJECT_SUMMARY               	revealed stage-dependent shifts in metabolite profiles, highlighting the
+PR:PROJECT_SUMMARY               	importance of the first 3 days of germination and kilning in determining the
+PR:PROJECT_SUMMARY               	final metabolite content of finished malt. Dynamic changes in chemical classes
+PR:PROJECT_SUMMARY               	and metabolic pathways provided insights into processes critical for malt
+PR:PROJECT_SUMMARY               	quality and beer production. Additionally, metabolites associated with
+PR:PROJECT_SUMMARY               	antimicrobial properties and stress responses were identified, underscoring the
+PR:PROJECT_SUMMARY               	interplay between barley and microbial metabolic processes during malting. This
+PR:PROJECT_SUMMARY               	comprehensive profiling advances our understanding of malting and suggests
+PR:PROJECT_SUMMARY               	potential markers for process monitoring and quality control, ultimately
+PR:PROJECT_SUMMARY               	enhancing malt quality and beer production.
+PR:INSTITUTE                     	USDA Agricultural Research Service
+PR:DEPARTMENT                    	Cereal Crops Research Unit
+PR:LABORATORY                    	Whitcomb lab
+PR:LAST_NAME                     	Rani
+PR:FIRST_NAME                    	Heena
+PR:ADDRESS                       	502 Walnut Street, Madison, WI 53726
+PR:EMAIL                         	bansalheena10@gmail.com
+PR:PHONE                         	7657759366
+PR:FUNDING_SOURCE                	USDA-ARS
+PR:PUBLICATIONS                  	https://doi.org/10.1016/j.foodchem.2024.141480
+PR:DOI                           	http://dx.doi.org/10.21228/M8SN77
+#STUDY
+ST:STUDY_TITLE                   	Integrative LC-MS and GC-MS Metabolic Profiling Unveils Dynamic Changes during
+ST:STUDY_TITLE                   	Barley Malting
+ST:STUDY_TYPE                    	Untargeted LC-MS and GC-MS analysis
+ST:STUDY_SUMMARY                 	Malting, a crucial process for beer production, involves complex biochemical
+ST:STUDY_SUMMARY                 	transformations affecting sensory attributes and product quality. Limited
+ST:STUDY_SUMMARY                 	knowledge of metabolic alterations during malting hinders the ability to enhance
+ST:STUDY_SUMMARY                 	malt quality. This study uses untargeted GC-MS and LC-MS metabolite profiling to
+ST:STUDY_SUMMARY                 	characterize metabolic dynamics through the malting process. After data
+ST:STUDY_SUMMARY                 	processing, a total of 4980 known metabolites were identified across six stages:
+ST:STUDY_SUMMARY                 	dry seed, post-steeping, germination (DOG1, DOG3, DOG5), and kilned, about 82%
+ST:STUDY_SUMMARY                 	of these showed significant changes during malting. Statistical analysis
+ST:STUDY_SUMMARY                 	revealed stage-dependent shifts in metabolite profiles, highlighting the
+ST:STUDY_SUMMARY                 	importance of the first 3 days of germination and kilning in determining the
+ST:STUDY_SUMMARY                 	final metabolite content of finished malt. Dynamic changes in chemical classes
+ST:STUDY_SUMMARY                 	and metabolic pathways provided insights into processes critical for malt
+ST:STUDY_SUMMARY                 	quality and beer production. Additionally, metabolites associated with
+ST:STUDY_SUMMARY                 	antimicrobial properties and stress responses were identified, underscoring the
+ST:STUDY_SUMMARY                 	interplay between barley and microbial metabolic processes during malting. This
+ST:STUDY_SUMMARY                 	comprehensive profiling advances our understanding of malting and suggests
+ST:STUDY_SUMMARY                 	potential markers for process monitoring and quality control, ultimately
+ST:STUDY_SUMMARY                 	enhancing malt quality and beer production.
+ST:INSTITUTE                     	USDA Agricultural Research Service
+ST:DEPARTMENT                    	Cereal Crops Research Unit
+ST:LABORATORY                    	Whitcomb lab
+ST:LAST_NAME                     	Rani
+ST:FIRST_NAME                    	Heena
+ST:ADDRESS                       	502 Walnut Street, Madison, WI 53726
+ST:EMAIL                         	bansalheena10@gmail.com
+ST:PHONE                         	7657759366
+ST:SUBMIT_DATE                   	2024-06-17
+#SUBJECT
+SU:SUBJECT_TYPE                  	Plant
+SU:SUBJECT_SPECIES               	Hordeum vulgare subsp. vulgare
+SU:TAXONOMY_ID                   	112509
+#SUBJECT_SAMPLE_FACTORS:         	SUBJECT(optional)[tab]SAMPLE[tab]FACTORS(NAME:VALUE pairs separated by |)[tab]Additional sample data
+SUBJECT_SAMPLE_FACTORS           	-	22-1-blank-blank-Blank	Sample source:Seed | Genotype:Conrad | Treatment:BLANK | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_Blank_002_01.mzML,20230210-SW-908_POS_Blank_002_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	39-1-blank-blank-Blank	Sample source:Seed | Genotype:Conrad | Treatment:BLANK | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_Blank_001_01.mzML,20230210-SW-908_POS_Blank_001_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	55-1-blank-blank-Blank	Sample source:Seed | Genotype:Conrad | Treatment:BLANK | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_Blank_003_01.mzML,20230210-SW-908_POS_Blank_003_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa01_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa01_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa08_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa08_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa15_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa15_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa17_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa17_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa18_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa18_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa22_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa22_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa37_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa37_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa38_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa38_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa41_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa41_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	13-1-2-dog0-14	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_011_01.mzML,20230210-SW-908_POS_011_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	16-1-2-dog0-10	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_013_01.mzML,20230210-SW-908_POS_013_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	18-1-2-dog0-17	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_015_01.mzML,20230210-SW-908_POS_015_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	27-1-2-dog0-15	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_022_01.mzML,20230210-SW-908_POS_022_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	41-1-2-dog0-18	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_033_01.mzML,20230210-SW-908_POS_033_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	48-1-2-dog0-16	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_039_01.mzML,20230210-SW-908_POS_039_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	56-1-2-dog0-12	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_045_01.mzML,20230210-SW-908_POS_045_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	63-1-2-dog0-11	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_051_01.mzML,20230210-SW-908_POS_051_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	64-1-2-dog0-13	Sample source:Seed | Genotype:Conrad | Treatment:DOG0 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_052_01.mzML,20230210-SW-908_POS_052_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa04_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa04_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa06_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa06_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa12_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa12_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa23_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa23_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa25_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa25_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa29_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa29_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa47_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa47_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa01_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa01_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa03_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa03_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	14-1-3-dog1-22	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_012_01.mzML,20230210-SW-908_POS_012_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	20-1-3-dog1-26	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_017_01.mzML,20230210-SW-908_POS_017_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	21-1-3-dog1-23	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_018_01.mzML,20230210-SW-908_POS_018_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	28-1-3-dog1-21	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_023_01.mzML,20230210-SW-908_POS_023_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	29-1-3-dog1-24	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_024_01.mzML,20230210-SW-908_POS_024_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	4-1-3-dog1-20	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_003_01.mzML,20230210-SW-908_POS_003_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	51-1-3-dog1-27	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_042_01.mzML,20230210-SW-908_POS_042_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	53-1-3-dog1-25	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_043_01.mzML,20230210-SW-908_POS_043_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	61-1-3-dog1-19	Sample source:Seed | Genotype:Conrad | Treatment:DOG1 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_049_01.mzML,20230210-SW-908_POS_049_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa02_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa02_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa07_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa07_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa09_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa09_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa19_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa19_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa24_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa24_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa32_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa32_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa34_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa34_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa35_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa35_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa43_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa43_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	10-1-4-dog3-36	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_008_01.mzML,20230210-SW-908_POS_008_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	17-1-4-dog3-30	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_014_01.mzML,20230210-SW-908_POS_014_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	2-1-4-dog3-29	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_001_01.mzML,20230210-SW-908_POS_001_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	25-1-4-dog3-31	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_020_01.mzML,20230210-SW-908_POS_020_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	36-1-4-dog3-33	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_030_01.mzML,20230210-SW-908_POS_030_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	42-1-4-dog3-28	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_034_01.mzML,20230210-SW-908_POS_034_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	5-1-4-dog3-32	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_004_01.mzML,20230210-SW-908_POS_004_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	57-1-4-dog3-34	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_046_01.mzML,20230210-SW-908_POS_046_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	65-1-4-dog3-35	Sample source:Seed | Genotype:Conrad | Treatment:DOG3 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_053_01.mzML,20230210-SW-908_POS_053_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa03_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa03_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa05_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa05_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa10_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa10_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa28_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa28_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa31_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa31_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa33_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa33_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa36_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa36_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa39_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa39_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa46_1	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa46_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	11-1-5-dog5-42	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_009_01.mzML,20230210-SW-908_POS_009_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	19-1-5-dog5-45	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_016_01.mzML,20230210-SW-908_POS_016_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	24-1-5-dog5-37	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_019_01.mzML,20230210-SW-908_POS_019_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	26-1-5-dog5-38	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_021_01.mzML,20230210-SW-908_POS_021_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	38-1-5-dog5-40	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_031_01.mzML,20230210-SW-908_POS_031_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	40-1-5-dog5-44	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_032_01.mzML,20230210-SW-908_POS_032_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	47-1-5-dog5-43	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_038_01.mzML,20230210-SW-908_POS_038_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	62-1-5-dog5-41	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_050_01.mzML,20230210-SW-908_POS_050_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	66-1-5-dog5-39	Sample source:Seed | Genotype:Conrad | Treatment:DOG5 | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_054_01.mzML,20230210-SW-908_POS_054_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa13_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa13_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa14_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa14_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa16_2	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa16_2.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa21_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa21_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa26_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa26_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa27_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa27_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa30_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa30_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa40_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa40_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa42_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa42_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa48_1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa48_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	35-1-1-dry-4	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_029_01.mzML,20230210-SW-908_POS_029_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	43-1-1-dry-2	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_035_01.mzML,20230210-SW-908_POS_035_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	44-1-1-dry-8	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_036_01.mzML,20230210-SW-908_POS_036_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	46-1-1-dry-9	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_037_01.mzML,20230210-SW-908_POS_037_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	49-1-1-dry-1	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_040_01.mzML,20230210-SW-908_POS_040_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	50-1-1-dry-7	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_041_01.mzML,20230210-SW-908_POS_041_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	54-1-1-dry-3	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_044_01.mzML,20230210-SW-908_POS_044_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	58-1-1-dry-6	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_047_01.mzML,20230210-SW-908_POS_047_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	7-1-1-dry-5	Sample source:Seed | Genotype:Conrad | Treatment:DRY | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_006_01.mzML,20230210-SW-908_POS_006_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa11_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa11_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa20_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa20_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa44_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa44_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa45_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa45_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa49_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa49_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230327dEGsa50_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230327dEGsa50_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa02_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa02_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa04_1	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa04_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	12-1-6-kilned-54	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_010_01.mzML,20230210-SW-908_POS_010_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	31-1-6-kilned-53	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_025_01.mzML,20230210-SW-908_POS_025_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	3-1-6-kilned-46	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_002_01.mzML,20230210-SW-908_POS_002_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	32-1-6-kilned-50	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_026_01.mzML,20230210-SW-908_POS_026_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	33-1-6-kilned-47	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_027_01.mzML,20230210-SW-908_POS_027_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	34-1-6-kilned-48	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_028_01.mzML,20230210-SW-908_POS_028_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	59-1-6-kilned-49	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_048_01.mzML,20230210-SW-908_POS_048_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	6-1-6-kilned-51	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_005_01.mzML,20230210-SW-908_POS_005_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	9-1-6-kilned-52	Sample source:Seed | Genotype:Conrad | Treatment:KILNED | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_007_01.mzML,20230210-SW-908_POS_007_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa05_1	Sample source:Seed | Genotype:Conrad | Treatment:QC_GC | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa05_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa06_1	Sample source:Seed | Genotype:Conrad | Treatment:QC_GC | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa06_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa07_1	Sample source:Seed | Genotype:Conrad | Treatment:QC_GC | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa07_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa08_1	Sample source:Seed | Genotype:Conrad | Treatment:QC_GC | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa08_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	230328dEGsa09_1	Sample source:Seed | Genotype:Conrad | Treatment:QC_GC | Platform:GC-MS	RAW_FILE_NAME(Raw file name)=230328dEGsa09_1.cdf
+SUBJECT_SAMPLE_FACTORS           	-	1-1-qc-qc-QC1	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_001_01.mzML, 20230210-SW-908_POS_QC_001_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	15-1-qc-qc-QC3	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_003_01.mzML,20230210-SW-908_POS_QC_003_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	23-1-qc-qc-QC4	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_004_01.mzML,20230210-SW-908_POS_QC_004_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	30-1-qc-qc-QC5	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_005_01.mzML,20230210-SW-908_POS_QC_005_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	37-1-qc-qc-QC6	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_006_01.mzML,20230210-SW-908_POS_QC_006_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	45-1-qc-qc-QC7	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_007_01.mzML,20230210-SW-908_POS_QC_007_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	52-1-qc-qc-QC8	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_008_01.mzML,20230210-SW-908_POS_QC_008_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	60-1-qc-qc-QC9	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_009_01.mzML,20230210-SW-908_POS_QC_009_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	67-1-qc-qc-QC10	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_010_01.mzML,20230210-SW-908_POS_QC_010_02.mzML
+SUBJECT_SAMPLE_FACTORS           	-	8-1-qc-qc-QC2	Sample source:Seed | Genotype:Conrad | Treatment:QC_LC | Platform:LC-MS	RAW_FILE_NAME(Raw file name)=20230210-SW-908_POS_QC_002_01.mzML,20230210-SW-908_POS_QC_002_02.mzML
+#COLLECTION
+CO:COLLECTION_SUMMARY            	9 samples were collected (three per micro-malting replicate) at 6 different
+CO:COLLECTION_SUMMARY            	stages: unmalted mature grain (DRY), out of steep/post-step (DOG0), on
+CO:COLLECTION_SUMMARY            	alternating days of germination (DOG1, DOG3, and DOG5), and at the end of
+CO:COLLECTION_SUMMARY            	kilning (KILNED). Samples were collected in Eppendorf tubes, immediately flash
+CO:COLLECTION_SUMMARY            	frozen in liquid nitrogen and subsequently stored at â80Â°C until grinding.
+CO:SAMPLE_TYPE                   	Barley seeds
+#TREATMENT
+TR:TREATMENT_SUMMARY             	9 samples were collected (three per micro-malting replicate) at 6 different
+TR:TREATMENT_SUMMARY             	stages: unmalted mature grain (DRY), out of steep/post-step (DOG0), on
+TR:TREATMENT_SUMMARY             	alternating days of germination (DOG1, DOG3, and DOG5), and at the end of
+TR:TREATMENT_SUMMARY             	kilning (KILNED)
+#SAMPLEPREP
+SP:SAMPLEPREP_SUMMARY            	For grinding, the seeds were lyophilized, placed in 5 ml polycarbonate vials
+SP:SAMPLEPREP_SUMMARY            	along with three stainless steel balls (6.3 mm), and cooled in liquid nitrogen.
+SP:SAMPLEPREP_SUMMARY            	The frozen tissue was ground to a fine powder in a 2010 Geno/Grinder (Spex
+SP:SAMPLEPREP_SUMMARY            	SamplePrep) with intermittent rests, rapidly re-cooled in liquid nitrogen, and
+SP:SAMPLEPREP_SUMMARY            	transferred to their final storage vials. The ground samples were stored at
+SP:SAMPLEPREP_SUMMARY            	â80Â°C until further analysis Preparation of samples for GC-MS analysis Finely
+SP:SAMPLEPREP_SUMMARY            	ground samples (4 mg) were extracted using 1 ml of 3:3:2 isopropanol
+SP:SAMPLEPREP_SUMMARY            	(IPA)/acetonitrile (ACN)/water (v/v/v) for 6 min at 4Â°C. After centrifugation,
+SP:SAMPLEPREP_SUMMARY            	the supernatant was aliquoted into two equal portions and dried. One aliquot was
+SP:SAMPLEPREP_SUMMARY            	derivatized with methoxamine, a mixture of fatty acid methyl esters (FAMEs)
+SP:SAMPLEPREP_SUMMARY            	ranging from C08 to C30 was added to each sample, and finally derivatized with
+SP:SAMPLEPREP_SUMMARY            	N-methyl-N-trimethylsilyltrifluoroacetamide (MSTFA). The prepared samples were
+SP:SAMPLEPREP_SUMMARY            	then transferred to vials, sealed, and loaded into the GC-MS instrument. Quality
+SP:SAMPLEPREP_SUMMARY            	control (QC) samples were prepared by equally pooling ground powder from all
+SP:SAMPLEPREP_SUMMARY            	biological samples and were processed as described above. Method blanks were
+SP:SAMPLEPREP_SUMMARY            	prepared using the same 3:3:2 IPA/ACN/water mixture without the addition of
+SP:SAMPLEPREP_SUMMARY            	biological sample and processed using the same extraction and processing
+SP:SAMPLEPREP_SUMMARY            	procedures as the other samples. Preparation of samples for LC-MS analysis
+SP:SAMPLEPREP_SUMMARY            	Finely ground samples (100-130mg) were extracted with 800 Î¼l of 80% IPA in
+SP:SAMPLEPREP_SUMMARY            	water for 10 minutes at room temperature. After centrifugation, 700 Î¼l of the
+SP:SAMPLEPREP_SUMMARY            	supernatant was transferred to a fresh vial. This process was repeated with
+SP:SAMPLEPREP_SUMMARY            	another 700 Âµl of 80% IPA, and the resulting 1.4 ml of combined supernatant was
+SP:SAMPLEPREP_SUMMARY            	discarded. The pellet was re-extracted twice more using 700 Âµl of 80% methanol.
+SP:SAMPLEPREP_SUMMARY            	The 1.4 ml of combined methanol extract was dried under nitrogen and then
+SP:SAMPLEPREP_SUMMARY            	reconstituted in 100 Âµl of methanol. The reconstituted extracts were then
+SP:SAMPLEPREP_SUMMARY            	transferred to autosampler vials for UPLC-MS analysis. QCs were prepared by
+SP:SAMPLEPREP_SUMMARY            	equally pooling ground powder from all samples and were processed as described
+SP:SAMPLEPREP_SUMMARY            	above. Method blanks were prepared and processed in the same manner without the
+SP:SAMPLEPREP_SUMMARY            	addition of biological sample.
+#CHROMATOGRAPHY
+CH:INSTRUMENT_NAME               	Waters Acquity
+CH:COLUMN_NAME                   	Waters Acquity UPLC CSH Phenyl Hexyl column (1.7 Î¼M, 1.0 x 100 mm)
+CH:COLUMN_TEMPERATURE            	65 Â°C
+CH:FLOW_GRADIENT                 	99% A, held at 99% A for 1 min, ramped to 98% B over 12 minutes, held at 98% B
+CH:FLOW_GRADIENT                 	for 3 minutes, and then returned to starting conditions over 0.05 minutes and
+CH:FLOW_GRADIENT                 	allowed to re-equilibrate for 3.95 minutes
+CH:FLOW_RATE                     	200 Î¼L/min
+CH:SOLVENT_A                     	100% water; 0.1% ammonium formate
+CH:SOLVENT_B                     	100% acetonitrile; 0.1% formic acid
+CH:CHROMATOGRAPHY_TYPE           	Reversed phase
+#ANALYSIS
+AN:ANALYSIS_TYPE                 	MS
+#MS
+MS:INSTRUMENT_NAME               	Waters Xevo-G2-XS
+MS:INSTRUMENT_TYPE               	QTOF
+MS:MS_TYPE                       	ESI
+MS:MS_COMMENTS                   	Following data collection, raw data files were preprocessed using Leco ChromaTOF
+MS:MS_COMMENTS                   	software v2.32 with baseline subtraction just above the noise level and
+MS:MS_COMMENTS                   	automatic mass spectral deconvolution and peak detection at a signal/noise ratio
+MS:MS_COMMENTS                   	of 5:1. Apex masses were reported for use in BinBase algorithm. Result files
+MS:MS_COMMENTS                   	were exported to a data server with absolute spectra intensities and further
+MS:MS_COMMENTS                   	processed by a filtering algorithm implemented in the metabolomics BinBase
+MS:MS_COMMENTS                   	database. Spectra were cut to 5% base peak abundance and matched to database
+MS:MS_COMMENTS                   	entries from most to least abundant spectra using the following matching
+MS:MS_COMMENTS                   	filters: retention index window Â±2,000 units (equivalent to about Â±2 s
+MS:MS_COMMENTS                   	retention time), validation of unique ions and apex masses (unique ion must be
+MS:MS_COMMENTS                   	included in apexing masses and present at &gt;3% of base peak abundance), mass
+MS:MS_COMMENTS                   	spectrum similarity must fit criteria dependent on peak purity and signal/noise
+MS:MS_COMMENTS                   	ratios and a final isomer filter. Raw data peak heights were normalized to the
+MS:MS_COMMENTS                   	sum of peak heights of all identified metabolites in each sample. One of the
+MS:MS_COMMENTS                   	replicates from the dry seeds failed and was removed from further GC-MS
+MS:MS_COMMENTS                   	analysis.
+MS:ION_MODE                      	POSITIVE
+MS:MS_RESULTS_FILE               	ST003289_AN005386_Results.txt	UNITS:Peak Area	Has m/z:Yes	Has RT:Yes	RT units:Seconds
+#END
